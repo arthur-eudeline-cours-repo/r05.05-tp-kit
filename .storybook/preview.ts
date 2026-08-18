@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { stGreen } from "@arthur.eudeline/starbucks-tp-kit/tailwind/colors";
+import "./tailwind.css";
 
 const preview: Preview = {
   parameters: {

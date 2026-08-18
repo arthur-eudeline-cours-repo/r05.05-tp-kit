@@ -2,7 +2,9 @@
   "name": "@arthur.eudeline/starbucks-tp-kit-sb",
   "version": "2.0.2",
   "scripts": {
+    "predev": "pnpm -C ../tp-kit run registry:build",
     "dev": "storybook dev -p 6006",
+    "prebuild": "pnpm -C ../tp-kit run registry:build",
     "build": "storybook build -o ./.build --disable-telemetry",
     "start": "http-server ./.build -p 6006 --gzip --brotli",
     "docker:build" : "docker build ../../ --tag arthureudeline/starbucks-tp-kit-storybook:latest --tag arthureudeline/starbucks-tp-kit-storybook:2.0.2",
@@ -30,8 +32,10 @@
     "eslint-plugin-storybook": "^0.8.0",
     "next": "^14",
     "postcss": "^8",
+    "@tailwindcss/postcss": "^4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^8.2.8"
+    "storybook": "^8.2.8",
+    "tailwindcss": "^4"
   }
 }
