@@ -1,61 +1,54 @@
 {
   "name": "@arthur.eudeline/starbucks-tp-kit",
-  "version": "2.0.15",
-  "private": false,
-  "exports": {
-    "./styles": "./dist/styles.css",
-    "./package.json": "./package.json",
-    "./tailwind/preset": "./tailwind/preset.js",
-    "./tailwind/colors": "./tailwind/colors.js",
-    "./tailwind/v4": "./tailwind/v4.css",
-    "./data": {
-      "types": "./dist/data/index.d.ts",
-      "import": "./dist/data/index.mjs",
-      "require": "./dist/data/index.js"
-    },
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.mjs",
-      "require": "./dist/*.js"
-    }
-  },
-  "type": "commonjs",
-  "source": "./src/index.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/types.d.ts",
-  "files": [
-    "dist",
-    "tailwind",
-    "README.md"
-  ],
+  "version": "3.0.0",
+  "private": true,
   "sideEffects": false,
-  "scripts": {
-    "build": "rm -rf ./dist && postcss src/main.css -o ./dist/styles.css && tsup",
-    "dev": "postcss src/main.css -o ./dist/styles.css --watch & tsup --watch",
-    "publish:local": "yalc push",
-    "lint": "publint"
+  "exports": {
+    "./package.json": "./package.json",
+    "./tailwind/colors": "./tailwind/colors.js",
+    "./data": "./src/data/index.ts",
+    "./types": "./src/types.ts",
+    "./utils": "./src/utils/index.ts",
+    "./utils/wait": "./src/utils/wait.ts",
+    "./lib/utils": "./src/lib/utils.ts",
+    ".": "./src/index.ts",
+    "./components/breadcrumbs": "./src/components/breadcrumbs.tsx",
+    "./components/button": "./src/components/button.tsx",
+    "./components/card": "./src/components/card.tsx",
+    "./components/footer": "./src/components/footer.tsx",
+    "./components/heading": "./src/components/heading.tsx",
+    "./components/loading-indicator": "./src/components/loading-indicator.tsx",
+    "./components/menu-bar": "./src/components/menu-bar.tsx",
+    "./components/notice-message": "./src/components/notice-message.tsx",
+    "./components/section-container": "./src/components/section-container.tsx",
+    "./components/starbucks-logo": "./src/components/starbucks-logo.tsx",
+    "./components/data-display/formatted-date": "./src/components/data-display/formatted-date.tsx",
+    "./components/data-display/formatted-price": "./src/components/data-display/formatted-price.tsx",
+    "./components/inputs/checkbox": "./src/components/inputs/checkbox.tsx",
+    "./components/inputs/password-input": "./src/components/inputs/password-input.tsx",
+    "./components/inputs/text-input": "./src/components/inputs/text-input.tsx",
+    "./components/orders/order-details-layout": "./src/components/orders/order-details-layout.tsx",
+    "./components/orders/order-status": "./src/components/orders/order-status.tsx",
+    "./components/orders/order-table-layout": "./src/components/orders/order-table-layout.tsx",
+    "./components/products/product-card-layout": "./src/components/products/product-card-layout.tsx",
+    "./components/products/product-cart-line": "./src/components/products/product-cart-line.tsx",
+    "./components/products/product-grid-layout": "./src/components/products/product-grid-layout.tsx",
+    "./components/products/product-image": "./src/components/products/product-image.tsx",
+    "./components/products/product-rating": "./src/components/products/product-rating.tsx"
   },
-  "publishConfig": {
-    "@arthur.eudeline-cours:registry": "https://npm.pkg.github.com"
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "registry:build": "shadcn build",
+    "lint": "eslint src"
   },
   "dependencies": {
-    "@radix-ui/react-checkbox": "^1.1.1",
-    "@radix-ui/react-icons": "^1.3.0",
+    "@base-ui/react": "^1.7.0",
     "class-variance-authority": "^0.7.0",
-    "i18next": "^23.4.1",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.427.0",
-    "zod": "^3.21.4",
-    "zod-i18n-map": "^2.14.0",
-    "@tailwindcss/typography": "^0.5.9"
+    "tailwind-merge": "^2.5.2"
   },
   "peerDependencies": {
-    "@headlessui/react": ">1.7.16",
     "@mantine/form": "^7",
     "@phosphor-icons/react": "^2.0.10",
     "next": ">13",
@@ -66,13 +59,10 @@
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/eslint__js": "^8.42.3",
-    "@types/glob": "^8.1.0",
     "@types/node": "^22.1.0",
     "@types/react": "^18.3.3",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
-    "autoprefixer": "^10",
-    "cssnano": "^7.0.4",
     "eslint": "^8.57.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-cypress": "^2.11.3",
@@ -83,14 +73,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-react-namespace-import": "^1.0.5",
     "eslint-plugin-storybook": "^0.8.0",
-    "glob": "^11.0.0",
-    "postcss": "^8",
-    "postcss-cli": "^11.0.0",
-    "publint": "^0.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3",
-    "tsup": "^8.2.4",
+    "shadcn": "^4.18.0",
+    "tailwindcss": "^4",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
   }

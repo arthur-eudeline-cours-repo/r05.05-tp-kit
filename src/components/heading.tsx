@@ -1,20 +1,21 @@
 import { cva } from "class-variance-authority";
 import React from "react";
+import { cn } from "../lib/utils";
 
-const variants = cva("kit-tracking-widest kit-uppercase", {
+const variants = cva("tracking-widest uppercase", {
   variants: {
     size: {
-      lg: "kit-text-xl",
-      md: "kit-text-base",
-      sm: "kit-text-sm",
+      lg: "text-xl",
+      md: "text-base",
+      sm: "text-sm",
     },
     variant: {
-      brand: "kit-text-brand",
-      black: "kit-text-slate-800",
+      brand: "text-brand",
+      black: "text-slate-800",
     },
     weight: {
-      normal: "kit-font-normal",
-      bold: "kit-font-bold",
+      normal: "font-normal",
+      bold: "font-bold",
     },
   },
   defaultVariants: {
@@ -66,6 +67,6 @@ export const Heading: React.FC<Props> = function ({
   children,
   ...props
 }) {
-  return <Comp className={`${variants(props)} ${className}`}>{children}</Comp>;
+  return <Comp className={cn(variants(props), className)}>{children}</Comp>;
 };
 

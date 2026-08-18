@@ -1,8 +1,9 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import React from "react";
+import { cn } from "../lib/utils";
 
 const buttonClasses = cva(
-  "kit-transition-colors kit-rounded-lg kit-tracking-wide kit-focus-visible:outline-none",
+  "transition-colors rounded-lg tracking-wide focus-visible:outline-none",
   {
     variants: {
       /**
@@ -11,26 +12,26 @@ const buttonClasses = cva(
        */
       variant: {
         primary:
-          "kit-bg-brand hover:kit-bg-brand-600 active:kit-bg-brand-700 disabled:kit-bg-brand-900 disabled:kit-cursor-not-allowed kit-text-white",
-        ghost: "kit-bg-transparent hover:kit-bg-black/5 active:kit-bg-black/10 disabled:kit-bg-black/5",
-        white: "kit-bg-white kit-text-default hover:kit-bg-stone-50 active:kit-bg-stone-100",
-        outline: "kit-bg-transparent hover:kit-bg-black/5 active:kit-bg-black/10 kit-border-2 kit-border-default",
-        light: "kit-bg-brand-100 kit-text-brand-900 hover:kit-bg-brand-200",
-        danger: "kit-bg-red-100 kit-text-red-900 hover:kit-bg-red-200"
+          "bg-brand hover:bg-brand-600 active:bg-brand-700 disabled:bg-brand-900 disabled:cursor-not-allowed text-white",
+        ghost: "bg-transparent hover:bg-black/5 active:bg-black/10 disabled:bg-black/5",
+        white: "bg-white text-default hover:bg-stone-50 active:bg-stone-100",
+        outline: "bg-transparent hover:bg-black/5 active:bg-black/10 border-2 border-default",
+        light: "bg-brand-100 text-brand-900 hover:bg-brand-200",
+        danger: "bg-red-100 text-red-900 hover:bg-red-200"
       },
       /**
        * Modifie la taille du boutton
        * @default md
        */
       size: {
-        sm: "kit-px-4 kit-py-2 kit-text-sm",
-        md: "kit-px-6 kit-py-4 kit-text-sm",
-        lg: "kit-px-6 kit-py-4 kit-text-lg",
+        sm: "px-4 py-2 text-sm",
+        md: "px-6 py-4 text-sm",
+        lg: "px-6 py-4 text-lg",
       },
       /**
        * Indique si le bouton occupera tout l'espace horizontal
        */
-      fullWidth: { true: "kit-w-full" },
+      fullWidth: { true: "w-full" },
     },
     defaultVariants: {
       variant: "primary",
@@ -73,7 +74,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
       ref={ref}
       type={props.type ?? "button"}
       onClick={props.onClick}
-      className={buttonClasses({...props, className: props.className})}
+      className={cn(buttonClasses({ variant: props.variant, size: props.size, fullWidth: props.fullWidth }), props.className)}
       disabled={props.disabled}
     >
       {props.children}

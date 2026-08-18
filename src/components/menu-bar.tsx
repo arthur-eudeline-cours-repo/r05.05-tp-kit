@@ -18,15 +18,15 @@ type Props = {
  */
 export const MenuBar: React.FC<Props> = function ({leading, trailing}) {
   return (
-    <nav className="kit-bg-white kit-shadow-2xl kit-shadow-gray-600/10 kit-sticky kit-inset-x-0 kit-top-0 kit-z-20 kit-p-4 lg:kit-px-8">
-      <div className="kit-container kit-mx-auto kit-grid kit-grid-cols-3 kit-gap-8 kit-relative">
+    <nav className="bg-white shadow-2xl shadow-gray-600/10 sticky inset-x-0 top-0 z-20 p-4 lg:px-8">
+      <div className="container mx-auto grid grid-cols-3 gap-8 relative">
         {leading ? leading : <section></section>}
 
-        <section className="kit-flex kit-justify-center">
-          <Link href={'/'} className="kit-transition-colors hover:kit-bg-black/10 active:kit-bg-black/20 kit-block kit-p-1 kit-rounded-full">
+        <section className="flex justify-center">
+          <Link href={'/'} className="transition-colors hover:bg-black/10 active:bg-black/20 block p-1 rounded-full">
             {/* Logo */}
             <StarbucksLogo
-              className="kit-select-none kit-pointer-events-none"
+              className="select-none pointer-events-none"
               size={50}
             />
           </Link>

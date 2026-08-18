@@ -1,7 +1,7 @@
 
-import { type OrderTableRowData } from "@/types";
-import { FormattedDate } from "@/components/data-display/formatted-date";
-import { FormattedPrice } from "@/components/data-display/formatted-price";
+import { type OrderTableRowData } from "../../types";
+import { FormattedDate } from "../data-display/formatted-date";
+import { FormattedPrice } from "../data-display/formatted-price";
 import { OrderStatus } from "./order-status";
 
 
@@ -24,40 +24,40 @@ type Props = {
  */
 const OrderTableLayout: React.FC<Props> = function ({ orders, onRowClick }) {
   return (
-    <div className="kit-flex">
-      <table className="-kit-mx-6 kit-flex-1 kit-select-none">
+    <div className="flex">
+      <table className="-mx-6 flex-1 select-none">
         <thead>
-          <tr className="kit-text-sm kit-uppercase">
-            <th className="kit-w-[70px] kit-bg-white kit-border-b kit-border-slate-100 kit-px-2 kit-py-4 kit-pl-6 kit-text-left">
+          <tr className="text-sm uppercase">
+            <th className="w-[70px] bg-white border-b border-slate-100 px-2 py-4 pl-6 text-left">
               N°
             </th>
-            <th className="kit-border-b kit-bg-white kit-border-slate-100 kit-px-2 kit-py-4 kit-text-left">
+            <th className="border-b bg-white border-slate-100 px-2 py-4 text-left">
               Statut
             </th>
-            <th className="kit-border-b kit-bg-white kit-border-slate-100 kit-px-2 kit-py-4 kit-text-right kit-pr-6">
+            <th className="border-b bg-white border-slate-100 px-2 py-4 text-right pr-6">
               Total
             </th>
           </tr>
         </thead>
-        <tbody className="kit-text-slate-700">
+        <tbody className="text-slate-700">
           {orders.length > 0 ? orders.map((order) => (
-            <tr key={order.id} className="kit-group" onClick={() => onRowClick(order)}>
-              <td className="kit-cursor-pointer kit-border-b kit-border-slate-100 kit-px-2 kit-py-4 kit-pl-6 kit-transition-colors group-active:kit-bg-slate-100 group-last:!kit-border-b-0 group-hover:kit-bg-slate-50">
+            <tr key={order.id} className="group" onClick={() => onRowClick(order)}>
+              <td className="cursor-pointer border-b border-slate-100 px-2 py-4 pl-6 transition-colors group-active:bg-slate-100 group-last:border-b-0! group-hover:bg-slate-50">
                 #{order.id}
               </td>
-              <td className="kit-cursor-pointer kit-border-b kit-border-slate-100 kit-px-2 kit-py-4 kit-transition-colors group-active:kit-bg-slate-100 group-last:!kit-border-b-0 group-hover:kit-bg-slate-50">
+              <td className="cursor-pointer border-b border-slate-100 px-2 py-4 transition-colors group-active:bg-slate-100 group-last:border-b-0! group-hover:bg-slate-50">
                 <OrderStatus status={order.status} />
-                <span className="kit-hidden md:kit-inline">
+                <span className="hidden md:inline">
                   {order.completedAt ? " Terminée le " : " Crée le "}
                   <FormattedDate date={order.completedAt ?? order.createdAt} />
                 </span>
               </td>
-              <td className="kit-cursor-pointer kit-border-b kit-border-slate-100 kit-px-2 kit-py-4 kit-pr-6 kit-text-right kit-transition-colors group-active:kit-bg-slate-100 group-last:!kit-border-b-0 group-hover:kit-bg-slate-50">
+              <td className="cursor-pointer border-b border-slate-100 px-2 py-4 pr-6 text-right transition-colors group-active:bg-slate-100 group-last:border-b-0! group-hover:bg-slate-50">
                 <FormattedPrice price={order.total} />
               </td>
             </tr>
           )) : <tr>
-            <td colSpan={4} className="kit-text-center kit-py-16">
+            <td colSpan={4} className="text-center py-16">
               Aucune commande
             </td>
             </tr>}

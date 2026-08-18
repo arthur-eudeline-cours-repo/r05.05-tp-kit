@@ -1,4 +1,4 @@
-import { OrderDataStatus } from "@/types";
+import { OrderDataStatus } from "../../types";
 import { cva } from "class-variance-authority";
 import React from "react";
 
@@ -15,12 +15,12 @@ const STATUS_LABELS: Record<OrderDataStatus, string> = {
 } as const; 
 
 const variants = cva(
-  "kit-rounded-full kit-px-4 kit-py-1 kit-text-xs kit-uppercase kit-font-bold kit-select-none kit-inline-flex kit-items-center kit-justify-center",
+  "rounded-full px-4 py-1 text-xs uppercase font-bold select-none inline-flex items-center justify-center",
   {
     variants: {
       status: {
-        IN_PROGRESS: 'kit-bg-amber-50 kit-text-amber-600',
-        COMPLETED: 'kit-bg-brand-50 kit-text-brand',
+        IN_PROGRESS: 'bg-amber-50 text-amber-600',
+        COMPLETED: 'bg-brand-50 text-brand',
       } satisfies Record<OrderDataStatus, string>
     }
   }

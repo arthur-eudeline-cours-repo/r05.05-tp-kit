@@ -1,7 +1,8 @@
 import { VariantProps, cva } from "class-variance-authority";
 import React from "react";
+import { cn } from "../lib/utils";
 
-const variants = cva("kit-px-4 lg:kit-px-8 kit-flow-root kit-py-8", {
+const variants = cva("px-4 lg:px-8 flow-root py-8", {
   variants: {
     /**
      * La couleur du fond de la section
@@ -56,8 +57,8 @@ export const SectionContainer: React.FC<Props> = function ({
   ...props
 }) {
   return (
-    <Comp id={id} className={`${variants(props)} ${className}`}>
-      <div className={`${fullWidth ? '' : 'container mx-auto'} ${wrapperClassName}`}>
+    <Comp id={id} className={cn(variants(props), className)}>
+      <div className={cn(!fullWidth && 'container mx-auto', wrapperClassName)}>
         {children}
       </div>
     </Comp>

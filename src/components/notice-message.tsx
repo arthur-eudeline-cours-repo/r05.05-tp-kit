@@ -1,6 +1,7 @@
 import { VariantProps, cva } from "class-variance-authority";
 import React from "react";
 import { WarningOctagon, CheckCircle } from "@phosphor-icons/react/dist/ssr";
+import { cn } from "../lib/utils";
 
 const labels = {
   error: "Erreur",
@@ -13,7 +14,7 @@ const icons = {
 } satisfies Record<keyof typeof labels, React.ReactNode>;
 
 const variants = cva(
-  "kit-my-6 kit-rounded-lg kit-p-4 kit-flex kit-flex-row kit-gap-4 kit-transition-colors kit-border-2 kit-cursor-pointer",
+  "my-6 rounded-lg p-4 flex flex-row gap-4 transition-colors border-2 cursor-pointer",
   {
     variants: {
       /**
@@ -22,9 +23,9 @@ const variants = cva(
        */
       type: {
         error:
-          "kit-bg-red-50 kit-text-red-800 hover:kit-bg-red-100 active:kit-bg-red-200 kit-border-red-800",
+          "bg-red-50 text-red-800 hover:bg-red-100 active:bg-red-200 border-red-800",
         success:
-          "kit-bg-green-50 kit-text-green-800 hover:kit-bg-green-100 active:kit-bg-green-200 kit-border-green-800",
+          "bg-green-50 text-green-800 hover:bg-green-100 active:bg-green-200 border-green-800",
       } satisfies Record<keyof typeof labels, string>,
     },
     defaultVariants: {
@@ -103,11 +104,11 @@ export const NoticeMessage: React.FC<Props> = function ({
   const type = props.type ?? "error";
 
   return (
-    <div className={`${variants(props)} ${className}`} onClick={onDismiss}>
+    <div className={cn(variants(props), className)} onClick={onDismiss}>
       {icons[type]}
-      <div className="kit-flex-1">
-        <p className="kit-uppercase kit-text-xs">{labels[type]}</p>
-        <p className="kit-text-sm">{message}</p>
+      <div className="flex-1">
+        <p className="uppercase text-xs">{labels[type]}</p>
+        <p className="text-sm">{message}</p>
       </div>
     </div>
   );

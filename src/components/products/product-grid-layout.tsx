@@ -38,9 +38,9 @@ type Props = {
  */
 export const ProductGridLayout: React.FC<Props> = function ({ products, children }) {
   return (
-    <ul className="kit-grid kit-grid-cols-1 kit-gap-8 sm:kit-grid-cols-2 md:kit-grid-cols-3 lg:kit-grid-cols-4 2xl:kit-grid-cols-5">
+    <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
       {products.map((product) => (
-        <li key={product.id} className="lg:kit-max-w[300px]">
+        <li key={product.id} className="lg:max-w[300px]">
           {children?.(product)}
         </li>
       ))}

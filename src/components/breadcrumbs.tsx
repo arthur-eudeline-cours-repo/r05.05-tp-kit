@@ -19,21 +19,21 @@ type Props = {
 export const BreadCrumbs: React.FC<Props> = function ({ items, className = "my-8" }) {
   return (
     <nav className={`${className}`}>
-      <ul className="kit-flex kit-flex-row kit-gap-2 kit-flex-wrap kit-text-sm kit-text-gray-600">
+      <ul className="flex flex-row gap-2 flex-wrap text-sm text-gray-600">
         {items.map((item, i) => (
-          <li key={item.url} className="kit-flex kit-flex-row kit-gap-2">
+          <li key={item.url} className="flex flex-row gap-2">
             {(i+1) !== items.length ? (
               <>
                 <Link
                   href={item.url}
-                  className="hover:kit-text-brand kit-transition-colors"
+                  className="hover:text-brand transition-colors"
                 >
                   {item.label}
                 </Link>
                 <span>/</span>
               </>
             ) : (
-              <span className="kit-text-brand">{item.label}</span>
+              <span className="text-brand">{item.label}</span>
             )}
           </li>
         ))}

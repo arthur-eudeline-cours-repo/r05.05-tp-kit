@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../lib/utils";
 
 type Props = {
   /**
@@ -15,5 +16,5 @@ type Props = {
  * Composant basique servant à rendre des composants dans une carte
  */
 export const Card: React.FC<Props> = function({children, className}) {
-  return <div className={`kit-bg-white kit-shadow-xl kit-p-6 kit-rounded-lg ${className}`}>{children}</div>;
+  return <div className={cn("bg-white shadow-xl p-6 rounded-lg", className)}>{children}</div>;
 };

@@ -1,5 +1,6 @@
 // Garger pour le storybook px-12 z-10 rounded-r-none
 import React from "react";
+import { cn } from "../../lib/utils";
 
 type Props = Omit<React.ComponentProps<"input">, "onChange"> & {
   /**
@@ -41,20 +42,24 @@ export const TextInput: React.FC<Props> = function ({
   const id = React.useId();
   return (
     <div>
-      <label htmlFor={id} className="kit-cursor-pointer kit-text-sm">
-        {label} {required && <span className="kit-text-red-600">*</span>}
+      <label htmlFor={id} className="cursor-pointer text-sm">
+        {label} {required && <span className="text-red-600">*</span>}
       </label>
-      <div className="kit-relative">
+      <div className="relative">
         {before}
         <input
           {...props}
           id={id}
           onChange={e => props.onChange?.(e.target.value)}
-          className={`kit-relative kit-w-full kit-overflow-visible kit-rounded-lg kit-bg-gray-100 kit-p-4 kit-text-sm kit-leading-none kit-text-default kit-outline-brand ${props.className} ${error !== undefined ? "kit-border-2 kit-border-red-600" : ""}`}
+          className={cn(
+            "relative w-full overflow-visible rounded-lg bg-gray-100 p-4 text-sm leading-none text-default outline-brand",
+            error !== undefined && "border-2 border-red-600",
+            props.className,
+          )}
         />
         {after}
       </div>
-      {error && <p className="kit-text-red-600 kit-text-sm">{error}</p>}
+      {error && <p className="text-red-600 text-sm">{error}</p>}
     </div>
   );
 };

@@ -34,7 +34,6 @@
         "./src/*"
       ],
     },
-    // Radix-UI config
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "declaration": true,

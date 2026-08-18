@@ -10,33 +10,33 @@ type Props = {
  */
 export const Footer: React.FC<Props> = function () {
   return (
-    <footer className="kit-bg-green-600 kit-pb-[100px] kit-text-white kit-relative kit-overflow-hidden">
-      <div className="kit-text-center lg:kit-text-left kit-text-xl lg:kit-text-3xl kit-uppercase kit-font-bold kit-tracking-widest kit-container kit-mx-auto kit-p-8">
+    <footer className="bg-green-600 pb-[100px] text-white relative overflow-hidden">
+      <div className="text-center lg:text-left text-xl lg:text-3xl uppercase font-bold tracking-widest container mx-auto p-8">
         Starbucks
       </div>
 
       <StarbucksLogo
         monochrome
-        className="kit-opacity-[0.05] kit-absolute kit-left-0 kit-top-8 lg:kit-top-1/2 lg:-kit-translate-y-1/2 -kit-translate-x-1/2 kit-select-none kit-pointer-events-none"
+        className="opacity-[0.05] absolute left-0 top-8 lg:top-1/2 lg:-translate-y-1/2 -translate-x-1/2 select-none pointer-events-none"
         size={800}
       />
 
-      <div className="kit-p-8 kit-bg-brand">
-        <div className="kit-grid sm:kit-grid-cols-2 md:kit-grid-cols-3 lg:kit-grid-cols-4 kit-gap-8 kit-container kit-mx-auto">
+      <div className="p-8 bg-brand">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 container mx-auto">
           {/* Col #1 */}
-          <div className="kit-hidden lg:kit-block"></div>
+          <div className="hidden lg:block"></div>
 
           {/* Col #2 */}
           {sections.map((col, colKey) => (
-            <div key={colKey} className="kit-space-y-12">
+            <div key={colKey} className="space-y-12">
               {col.map((section, sectionKey) => (
                 <div key={sectionKey}>
-                  <h2 className="kit-font-medium kit-text-2xl kit-tracking-wide kit-mb-4">
+                  <h2 className="font-medium text-2xl tracking-wide mb-4">
                     {section.heading}
                   </h2>
-                  <ul className="kit-space-y-2 kit-text-sm">
+                  <ul className="space-y-2 text-sm">
                     {section.items.map((item, key) => (
-                      <li key={key} className="kit-text-white/50 hover:kit-text-white kit-transition-colors kit-cursor-pointer">{item}</li>
+                      <li key={key} className="text-white/50 hover:text-white transition-colors cursor-pointer">{item}</li>
                     ))}
                   </ul>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Circle, Star } from "lucide-react";
+import { cn } from "../../lib/utils";
 
 type Props = {
   /**
@@ -25,12 +26,12 @@ type Props = {
 /**
  * Utilisé pour affiché une note entre 0 et 5
  */
-export const ProductRating: React.FC<Props> = function({icon = 'star', value, size = 16, className = ''}) {
+export const ProductRating: React.FC<Props> = function({icon = 'star', value, size = 16, className}) {
   const symbols: React.ReactElement[] = [];
   for (let i = 0; i < 5; i++) {
     const iconClassName = i < value
-      ? "kit-fill-brand kit-text-brand"
-      : "kit-text-200 kit-stroke-[2.5]";
+      ? "fill-brand text-brand"
+      : "text-200 stroke-[2.5]";
 
     if (icon === "star") {
       symbols.push(<Star className={iconClassName} size={size}/>);
@@ -39,7 +40,7 @@ export const ProductRating: React.FC<Props> = function({icon = 'star', value, si
     }
   }
 
-  return <ul className={`kit-flex kit-flex-row kit-gap-1 kit-not-prose ${className}`}>
+  return <ul className={cn("flex flex-row gap-1 not-prose", className)}>
     {symbols.map((symbol, i) => <li key={i}>{symbol}</li>)}
   </ul>;
 };

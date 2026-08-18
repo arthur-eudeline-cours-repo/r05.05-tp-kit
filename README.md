@@ -1,73 +1,59 @@
 # Starbucks TP Kit
-UI Kit pour le TP Starbucks 3e années IUT Nevers
 
-## Installation
+UI Kit pour le TP Starbucks 3e années IUT Nevers.
 
-- **Installer la librairie**
-  ```sh
-  npm install @arthur.eudeline/starbucks-tp-kit
-  ```
+Depuis la v3, le kit est distribué comme un **registry shadcn** : pas de package npm compilé, pas de
+préfixe Tailwind. Les composants sont de simples fichiers source (Tailwind v4, [Base UI](https://base-ui.com),
+[`cn()`](./src/lib/utils.ts) via `clsx` + `tailwind-merge`) que vous copiez dans votre propre projet avec la
+CLI `shadcn`, exactement comme les composants du registry officiel.
 
-# Tailwind v3
+## Installation d'un composant
 
-- **Modifier votre configuration TailwindCSS** 
-  ```js
-  // tailwind.config.js | tailwind.config.ts
-  
-  import { Config } from "tailwindcss"
+Dans un projet Next.js/Vite déjà initialisé avec `shadcn` (`npx shadcn@latest init`) :
 
-  const config: Config = {
-    "presets": [
-      // Ajoute la couleur brand
-      require('@arthur.eudeline/starbucks-tp-kit/tailwind/preset')
-    ],
-    content: [
-      './src/**/*.{js,ts,jsx,tsx}',
-    ],
-  }
-
-  export default config;
-  ```
-- **Importer le CSS dans votre Root Layout**
-  ```tsx
-  // src/app/layout.tsx
-  
-  import '@arthur.eudeline/starbucks-tp-kit/styles';
-  import './globals.css';
-  
-  // [...]
-  ```
-
-# Tailwind v4
-Ajoutez la ligne suivante à votre fichier `src/app/globals.css`
-```css
-@import "tailwindcss";
-@import "@arthur.eudeline/starbucks-tp-kit/tailwind/v4"
-```
-Importez ensuite le style des composants `import "@arthur.eudeline/starbucks-tp-kit/styles";` en ajoutant cet import à votre fichier `src/app/layout.tsx` :
-```tsx
-import "./globals.css";
-// Style des composants
-import "@arthur.eudeline/starbucks-tp-kit/styles";
+```sh
+npx shadcn@latest add http://localhost:6006/r/button.json
 ```
 
-# **Importer les composants**
-  ```tsx
-  // src/app/my-component.tsx
-  import { SectionContainer } from "@arthur.eudeline/starbucks-tp-kit/components/section-container";
+(remplacez l'URL par celle où le registry est servi — voir *Servir le registry* ci-dessous). La CLI copie
+le fichier source dans `components/ui/`, installe les dépendances npm nécessaires (`class-variance-authority`,
+`@base-ui/react`, etc.) et ajoute les couleurs de marque (`brand`, `green`, `coffee`, `default`) à votre thème
+via l'item `theme`.
 
-  export function MyComponent() {
-    return <SectionContainer>
-      {/* ... */}
-    </SectionContainer>
-  }
-  ```
+Pour récupérer les couleurs et le reset CSS du kit sans composant particulier :
 
+```sh
+npx shadcn@latest add http://localhost:6006/r/theme.json
+```
+
+## Composants disponibles
+
+Voir [`registry.json`](./registry.json) pour la liste complète (nom, dépendances, fichiers). Chaque
+composant a son propre item ; les dépendances internes (ex. `password-input` → `text-input` + `button`)
+sont déclarées via `registryDependencies` et installées automatiquement.
+
+## Servir le registry
+
+```sh
+pnpm run registry:build   # génère public/r/*.json à partir de registry.json
+```
+
+Le dossier `public/r/` peut ensuite être servi par n'importe quel serveur statique (le Storybook dockerisé de
+ce monorepo le fait déjà — voir plus bas).
+
+## Utilisation dans ce monorepo
+
+`apps/fil-rouge/web` et `tooling/storybook` consomment le kit comme package workspace pnpm
+(`@arthur.eudeline/starbucks-tp-kit`, `workspace:*`), directement depuis `src/` — il n'y a pas de build à
+lancer. `apps/fil-rouge/web` transpile le package via `transpilePackages` dans `next.config.js`.
 
 ## Documentation
-Le Kit est livré avec un storybook dockerisé. Il liste tous les composants disponibles, leurs différentes variations ainsi la façon dont les utiliser.
+
+Le Kit est livré avec un storybook dockerisé. Il liste tous les composants disponibles, leurs différentes
+variations ainsi la façon dont les utiliser.
 
 ### Installation
+
 - **Via Docker**
   ```sh
   # Télécharger/Mettre à jour
