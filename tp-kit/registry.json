@@ -1,0 +1,500 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "starbucks-tp-kit",
+  "homepage": "https://github.com/arthur-eudeline/r05.05-dev-avance-tp-corrige",
+  "items": [
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "Starbucks theme",
+      "description": "Couleurs de marque (brand/green/coffee) et couleur de texte par défaut du TP kit.",
+      "cssVars": {
+        "theme": {
+          "color-brand": "#388a6b",
+          "color-brand-50": "#f0f9f5",
+          "color-brand-100": "#dbf0e4",
+          "color-brand-200": "#bae0cd",
+          "color-brand-300": "#8cc9ae",
+          "color-brand-400": "#5cab8a",
+          "color-brand-500": "#388a6b",
+          "color-brand-600": "#297258",
+          "color-brand-700": "#215b48",
+          "color-brand-800": "#1c493a",
+          "color-brand-900": "#183c31",
+          "color-brand-950": "#0c221c",
+          "color-green": "#388a6b",
+          "color-green-50": "#f0f9f5",
+          "color-green-100": "#dbf0e4",
+          "color-green-200": "#bae0cd",
+          "color-green-300": "#8cc9ae",
+          "color-green-400": "#5cab8a",
+          "color-green-500": "#388a6b",
+          "color-green-600": "#297258",
+          "color-green-700": "#215b48",
+          "color-green-800": "#1c493a",
+          "color-green-900": "#183c31",
+          "color-green-950": "#0c221c",
+          "color-coffee": "#463F3A",
+          "color-coffee-50": "#fcf9f4",
+          "color-coffee-100": "#e6e2de",
+          "color-coffee-200": "#bab6b3",
+          "color-coffee-300": "#D7BDA2",
+          "color-coffee-400": "#9c9a98",
+          "color-coffee-500": "#B68554",
+          "color-coffee-600": "#73675F",
+          "color-coffee-700": "#5C534C",
+          "color-coffee-800": "#463F3A",
+          "color-coffee-900": "#272321",
+          "color-coffee-950": "#181614",
+          "color-default": "#1f2937"
+        }
+      },
+      "css": {
+        "@layer base": {
+          "input[type=\"number\"]::-webkit-inner-spin-button, input[type=\"number\"]::-webkit-outer-spin-button": {
+            "-webkit-appearance": "none",
+            "margin": "0"
+          },
+          "input[type=\"number\"]": {
+            "-moz-appearance": "textfield"
+          }
+        }
+      },
+      "files": []
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "cn()",
+      "description": "Fusionne des classes Tailwind (clsx + tailwind-merge).",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "type": "registry:lib",
+      "title": "Types produits/commandes",
+      "description": "Types partagés (ProductData, OrderData, ...) utilisés par plusieurs composants du kit.",
+      "files": [
+        {
+          "path": "src/types.ts",
+          "type": "registry:lib",
+          "target": "types.ts"
+        }
+      ]
+    },
+    {
+      "name": "starbucks-logo",
+      "type": "registry:ui",
+      "title": "StarbucksLogo",
+      "description": "Le logo Starbucks en SVG, avec une variante monochrome.",
+      "files": [
+        {
+          "path": "src/components/starbucks-logo.tsx",
+          "type": "registry:ui",
+          "target": "@components/starbucks-logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Bouton avec plusieurs variantes (primary, ghost, white, outline, light, danger) et tailles.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/button.tsx",
+          "type": "registry:ui",
+          "target": "@components/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Conteneur basique avec fond blanc, ombre et coins arrondis.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/card.tsx",
+          "type": "registry:ui",
+          "target": "@components/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heading",
+      "type": "registry:ui",
+      "title": "Heading",
+      "description": "Titre de section/page avec variantes de taille, couleur et graisse.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/heading.tsx",
+          "type": "registry:ui",
+          "target": "@components/heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loading-indicator",
+      "type": "registry:ui",
+      "title": "LoadingIndicator",
+      "description": "Indicateur de chargement animé (spinner).",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/loading-indicator.tsx",
+          "type": "registry:ui",
+          "target": "@components/loading-indicator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "notice-message",
+      "type": "registry:ui",
+      "title": "NoticeMessage",
+      "description": "Message d'état (erreur/succès) avec icône.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "@phosphor-icons/react"
+      ],
+      "files": [
+        {
+          "path": "src/components/notice-message.tsx",
+          "type": "registry:ui",
+          "target": "@components/notice-message.tsx"
+        }
+      ]
+    },
+    {
+      "name": "section-container",
+      "type": "registry:ui",
+      "title": "SectionContainer",
+      "description": "Conteneur de section pleine largeur avec fond coloré (coffee/white/brand).",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/section-container.tsx",
+          "type": "registry:ui",
+          "target": "@components/section-container.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "BreadCrumbs",
+      "description": "Fil d'Ariane basé sur next/link.",
+      "files": [
+        {
+          "path": "src/components/breadcrumbs.tsx",
+          "type": "registry:ui",
+          "target": "@components/breadcrumbs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu-bar",
+      "type": "registry:ui",
+      "title": "MenuBar",
+      "description": "Barre de navigation du haut de page, avec logo centré et zones leading/trailing.",
+      "registryDependencies": [
+        "http://localhost:6006/r/starbucks-logo.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/menu-bar.tsx",
+          "type": "registry:ui",
+          "target": "@components/menu-bar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:ui",
+      "title": "Footer",
+      "description": "Pied de page avec logo, sections de liens et données par défaut.",
+      "registryDependencies": [
+        "http://localhost:6006/r/starbucks-logo.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/footer.tsx",
+          "type": "registry:ui",
+          "target": "@components/footer.tsx"
+        },
+        {
+          "path": "src/data/footer-sections.data.ts",
+          "type": "registry:file",
+          "target": "data/footer-sections.data.ts"
+        }
+      ]
+    },
+    {
+      "name": "formatted-date",
+      "type": "registry:ui",
+      "title": "FormattedDate",
+      "description": "Affiche une date au format DD/MM/YYYY à HH:mm:ss.",
+      "files": [
+        {
+          "path": "src/components/data-display/formatted-date.tsx",
+          "type": "registry:ui",
+          "target": "@components/data-display/formatted-date.tsx"
+        }
+      ]
+    },
+    {
+      "name": "formatted-price",
+      "type": "registry:ui",
+      "title": "FormattedPrice",
+      "description": "Affiche un nombre formaté comme un prix en euros.",
+      "files": [
+        {
+          "path": "src/components/data-display/formatted-price.tsx",
+          "type": "registry:ui",
+          "target": "@components/data-display/formatted-price.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-input",
+      "type": "registry:ui",
+      "title": "TextInput",
+      "description": "Champ de saisie texte avec label, erreur, et emplacements before/after.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/inputs/text-input.tsx",
+          "type": "registry:ui",
+          "target": "@components/inputs/text-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "type": "registry:ui",
+      "title": "PasswordInput",
+      "description": "TextInput spécialisé pour les mots de passe, avec bouton d'affichage/masquage.",
+      "registryDependencies": [
+        "http://localhost:6006/r/text-input.json",
+        "http://localhost:6006/r/button.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/inputs/password-input.tsx",
+          "type": "registry:ui",
+          "target": "@components/inputs/password-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Checkbox accessible basée sur Base UI, avec label associé.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/inputs/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "@components/inputs/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "product-image",
+      "type": "registry:ui",
+      "title": "ProductImage",
+      "description": "Image produit optimisée (next/image) avec effet de survol.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/products/product-image.tsx",
+          "type": "registry:ui",
+          "target": "@components/products/product-image.tsx"
+        }
+      ]
+    },
+    {
+      "name": "product-card-layout",
+      "type": "registry:ui",
+      "title": "ProductCardLayout",
+      "description": "Carte produit (image, nom, prix) avec un emplacement pour un bouton personnalisé.",
+      "registryDependencies": [
+        "http://localhost:6006/r/product-image.json",
+        "http://localhost:6006/r/formatted-price.json",
+        "http://localhost:6006/r/types.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/products/product-card-layout.tsx",
+          "type": "registry:ui",
+          "target": "@components/products/product-card-layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "product-cart-line",
+      "type": "registry:ui",
+      "title": "ProductCartLine",
+      "description": "Ligne produit du panier avec contrôle de quantité et suppression.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json",
+        "http://localhost:6006/r/button.json",
+        "http://localhost:6006/r/formatted-price.json",
+        "http://localhost:6006/r/types.json"
+      ],
+      "dependencies": [
+        "@phosphor-icons/react"
+      ],
+      "files": [
+        {
+          "path": "src/components/products/product-cart-line.tsx",
+          "type": "registry:ui",
+          "target": "@components/products/product-cart-line.tsx"
+        }
+      ]
+    },
+    {
+      "name": "product-grid-layout",
+      "type": "registry:ui",
+      "title": "ProductGridLayout",
+      "description": "Grille responsive de produits (builder pattern).",
+      "registryDependencies": [
+        "http://localhost:6006/r/types.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/products/product-grid-layout.tsx",
+          "type": "registry:ui",
+          "target": "@components/products/product-grid-layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "product-rating",
+      "type": "registry:ui",
+      "title": "ProductRating",
+      "description": "Affiche une note sous forme d'étoiles ou de cercles.",
+      "registryDependencies": [
+        "http://localhost:6006/r/utils.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/products/product-rating.tsx",
+          "type": "registry:ui",
+          "target": "@components/products/product-rating.tsx"
+        }
+      ]
+    },
+    {
+      "name": "order-status",
+      "type": "registry:ui",
+      "title": "OrderStatus",
+      "description": "Badge de statut de commande (en cours/complétée).",
+      "registryDependencies": [
+        "http://localhost:6006/r/types.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/orders/order-status.tsx",
+          "type": "registry:ui",
+          "target": "@components/orders/order-status.tsx"
+        }
+      ]
+    },
+    {
+      "name": "order-details-layout",
+      "type": "registry:ui",
+      "title": "OrderDetailsLayout",
+      "description": "Détail complet d'une commande (statut, dates, lignes, total).",
+      "registryDependencies": [
+        "http://localhost:6006/r/order-status.json",
+        "http://localhost:6006/r/formatted-date.json",
+        "http://localhost:6006/r/formatted-price.json",
+        "http://localhost:6006/r/button.json",
+        "http://localhost:6006/r/product-image.json",
+        "http://localhost:6006/r/types.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/orders/order-details-layout.tsx",
+          "type": "registry:ui",
+          "target": "@components/orders/order-details-layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "order-table-layout",
+      "type": "registry:ui",
+      "title": "OrderTableLayout",
+      "description": "Tableau listant les commandes d'un utilisateur.",
+      "registryDependencies": [
+        "http://localhost:6006/r/formatted-date.json",
+        "http://localhost:6006/r/formatted-price.json",
+        "http://localhost:6006/r/order-status.json",
+        "http://localhost:6006/r/types.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/orders/order-table-layout.tsx",
+          "type": "registry:ui",
+          "target": "@components/orders/order-table-layout.tsx"
+        }
+      ]
+    }
+  ]
+}
