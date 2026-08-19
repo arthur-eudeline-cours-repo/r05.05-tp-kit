@@ -1,6 +1,8 @@
-import type { Preview } from "@storybook/react";
-import { stGreen } from "@arthur.eudeline/starbucks-tp-kit/tailwind/colors";
+import type { Preview } from "@storybook/nextjs-vite";
+import colors from "@arthur.eudeline/starbucks-tp-kit/tailwind/colors";
 import "./tailwind.css";
+
+const { stGreen } = colors;
 
 const preview: Preview = {
   parameters: {
@@ -9,21 +11,22 @@ const preview: Preview = {
     },
     layout: "fullscreen",
     backgrounds: {
-      default: "white",
-      values: [
-        {
+      options: {
+        starbucks: {
           name: "starbucks",
           value: stGreen.DEFAULT,
         },
-        {
+
+        white: {
           name: "white",
           value: "#ffffff",
         },
-        {
+
+        slate: {
           name: "slate",
           value: "#f8fafc"
         }
-      ]
+      }
     },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -33,6 +36,12 @@ const preview: Preview = {
       },
     },
   },
+
+  initialGlobals: {
+    backgrounds: {
+      value: "white"
+    }
+  }
 };
 
 export default preview;

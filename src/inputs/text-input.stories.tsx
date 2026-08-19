@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { TextInput } from "#tp-kit/components/inputs/text-input";
 import { AtSign, Eye } from "lucide-react";
 import { Button } from "#tp-kit/components/button";

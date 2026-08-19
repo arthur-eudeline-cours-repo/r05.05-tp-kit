@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { StarbucksLogo } from "#tp-kit/components/starbucks-logo";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -35,14 +35,14 @@ export const Sizing: Story = {
  * Pour rendre le logo monochrome, vous pouvez définir la propriété `monochrome` à `true` et ensuite appliquer une classe de coloration telle que `text-white` sur le logo lui-même ou sur un parent.
  */
 export const Monochrome: Story = {
-  parameters: {
-    backgrounds: {
-      default: "starbucks",
-    },
-  },
   args: {
     className: "kit-text-white kit-opacity-50",
     monochrome: true,
     size: "100px"
+  },
+  globals: {
+    backgrounds: {
+      value: "starbucks"
+    }
   }
 }

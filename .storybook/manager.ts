@@ -1,6 +1,6 @@
 import { version } from "@arthur.eudeline/starbucks-tp-kit/package.json";
-import { addons } from "@storybook/manager-api";
-import { create, themes } from "@storybook/theming";
+import { addons } from "storybook/manager-api";
+import { create, themes } from "storybook/theming";
 
 const theme = themes.dark;
 

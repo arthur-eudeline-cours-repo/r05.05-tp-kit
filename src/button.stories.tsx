@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Button } from "#tp-kit/components/button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -40,10 +40,10 @@ export const White: Story = {
   args: {
     variant: "white",
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "starbucks",
-    },
+      value: "starbucks"
+    }
   },
 };
 

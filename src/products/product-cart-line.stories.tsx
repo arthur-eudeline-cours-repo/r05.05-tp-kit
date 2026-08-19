@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { PRODUCTS_CATEGORY_DATA } from "#tp-kit/data";
 import { ProductCartLine } from "#tp-kit/components/products/product-cart-line";
 import { Card } from "#tp-kit/components/card";
