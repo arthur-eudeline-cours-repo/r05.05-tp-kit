@@ -1,0 +1,7 @@
+{
+  "name": "starbucks-tp-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UI kit (registry shadcn) et Storybook du TP fil rouge Starbucks — R05.05 Programmation Avancée, IUT Nevers.",
+  "packageManager": "pnpm@11.1.2"
+}
