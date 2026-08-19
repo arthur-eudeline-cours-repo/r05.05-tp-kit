@@ -1,0 +1,35 @@
+{
+  "name": "@arthur.eudeline/starbucks-tp-kit-sb",
+  "version": "2.0.2",
+  "scripts": {
+    "predev": "pnpm -C ../tp-kit run registry:build",
+    "dev": "storybook dev -p 6006",
+    "prebuild": "pnpm -C ../tp-kit run registry:build",
+    "build": "storybook build -o ./.build --disable-telemetry",
+    "start": "http-server ./.build -p 6006 --gzip --brotli",
+    "docker:build": "docker build ../../ --tag arthureudeline/starbucks-tp-kit-storybook:latest --tag arthureudeline/starbucks-tp-kit-storybook:2.0.2",
+    "docker:push": "docker push arthureudeline/starbucks-tp-kit-storybook -a"
+  },
+  "dependencies": {
+    "@arthur.eudeline/starbucks-tp": "workspace:*",
+    "@arthur.eudeline/starbucks-tp-kit": "workspace:*",
+    "http-server": "14.1.1",
+    "lucide-react": "^0.427.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.5.9",
+    "@storybook/addon-links": "^10.5.9",
+    "@storybook/addon-mcp": "^0.7.0",
+    "@storybook/nextjs-vite": "10.5.9",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22.1.0",
+    "eslint-plugin-storybook": "^10.5.9",
+    "next": "^14",
+    "postcss": "^8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^10.5.9",
+    "tailwindcss": "^4",
+    "vite": "^7.0.0"
+  }
+}
