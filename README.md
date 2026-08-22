@@ -25,6 +25,14 @@ Pour récupérer les couleurs et le reset CSS du kit sans composant particulier 
 npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/theme.json
 ```
 
+Le jeu de données produits du TP (`PRODUCTS_CATEGORY_DATA`, copié dans
+`src/data/products-category.data.ts`) s'installe de la même façon — c'est ce dont les étudiants ont besoin
+pour intégrer les maquettes avant d'avoir une base de données :
+
+```sh
+npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/products-data.json
+```
+
 ## Composants disponibles
 
 Voir [`registry.json`](./registry.json) pour la liste complète (nom, dépendances, fichiers). Chaque
