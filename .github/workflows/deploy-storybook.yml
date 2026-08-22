@@ -30,11 +30,14 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
+      # Pas de `cache: pnpm` ici : ce dépôt ne versionne pas de pnpm-lock.yaml
+      # (il est reconstruit par scripts/split-ui-kit-public.sh depuis le
+      # monorepo, dont le lockfile décrit une autre workspace), et setup-node
+      # échoue s'il ne trouve pas de lockfile sur lequel baser sa clé de cache.
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
