@@ -6,6 +6,7 @@ const meta = {
   title: "Inputs/Checkbox",
   component: Checkbox,
   parameters: {
+    registryItem: "checkbox",
     layout: "centered",
   },
   tags: ["autodocs"],

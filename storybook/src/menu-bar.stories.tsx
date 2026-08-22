@@ -6,6 +6,7 @@ const meta = {
   title: "MenuBar",
   component: MenuBar,
   parameters: {
+    registryItem: "menu-bar",
     layout: "fullscreen",
   },
   tags: ["autodocs"],

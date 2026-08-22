@@ -6,6 +6,7 @@ const meta = {
   title: "BreadCrumbs",
   component: BreadCrumbs,
   parameters: {
+    registryItem: "breadcrumbs",
     layout: "centered",
   },
   tags: ["autodocs"],

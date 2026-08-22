@@ -7,6 +7,7 @@ const meta = {
   title: "Orders/OrderDetailsLayout",
   component: OrderDetailsLayout,
   parameters: {
+    registryItem: "order-details-layout",
     layout: "centered",
     backgrounds: {
       default: "slate",

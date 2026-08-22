@@ -6,6 +6,7 @@ const meta = {
   title: "Products/ProductRating",
   component: ProductRating,
   parameters: {
+    registryItem: "product-rating",
     layout: "centered",
   },
   tags: ["autodocs"],

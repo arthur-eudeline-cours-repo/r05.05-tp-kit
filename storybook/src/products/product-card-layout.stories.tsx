@@ -9,6 +9,7 @@ const meta = {
   title: "Products/ProductCardLayout",
   component: ProductCardLayout,
   parameters: {
+    registryItem: "product-card-layout",
     layout: "centered",
     backgrounds: {
       default: "slate"

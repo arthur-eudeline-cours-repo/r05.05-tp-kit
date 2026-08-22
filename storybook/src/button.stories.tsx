@@ -6,6 +6,7 @@ const meta = {
   title: "Button",
   component: Button,
   parameters: {
+    registryItem: "button",
     layout: "centered",
   },
   tags: ["autodocs"],

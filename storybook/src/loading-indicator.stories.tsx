@@ -6,6 +6,7 @@ const meta = {
   title: "LoadingIndicator",
   component: LoadingIndicator,
   parameters: {
+    registryItem: "loading-indicator",
     layout: "centered",
   },
   tags: ["autodocs"],

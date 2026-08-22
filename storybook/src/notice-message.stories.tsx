@@ -6,6 +6,7 @@ const meta = {
   title: "NoticeMessage",
   component: NoticeMessage,
   parameters: {
+    registryItem: "notice-message",
     layout: "centered",
   },
   tags: ["autodocs"],

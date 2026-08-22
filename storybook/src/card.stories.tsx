@@ -6,6 +6,7 @@ const meta = {
   title: "Card",
   component: Card,
   parameters: {
+    registryItem: "card",
     layout: "centered",
     backgrounds: {
       default: "slate",

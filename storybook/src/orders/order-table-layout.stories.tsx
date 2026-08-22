@@ -9,6 +9,7 @@ const meta = {
   title: "Orders/OrderTableLayout",
   component: OrderTableLayout,
   parameters: {
+    registryItem: "order-table-layout",
     layout: "centered",
     backgrounds: {
       default: "slate"

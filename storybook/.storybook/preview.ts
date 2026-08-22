@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/nextjs-vite";
 import colors from "@arthur.eudeline/starbucks-tp-kit/tailwind/colors";
+import { DocsPage } from "./docs-page";
 import "./tailwind.css";
 
 const { stGreen } = colors;
@@ -10,6 +11,9 @@ const preview: Preview = {
       appDirectory: true,
     },
     layout: "fullscreen",
+    docs: {
+      page: DocsPage,
+    },
     backgrounds: {
       options: {
         starbucks: {

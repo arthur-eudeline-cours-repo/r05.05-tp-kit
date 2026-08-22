@@ -6,6 +6,7 @@ const meta = {
   title: "Data Display/FormattedPrice",
   component: FormattedPrice,
   parameters: {
+    registryItem: "formatted-price",
     layout: "centered",
   },
   tags: ["autodocs"],

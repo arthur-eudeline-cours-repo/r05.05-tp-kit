@@ -8,6 +8,7 @@ const meta = {
   title: "Products/ProductCartLine",
   component: ProductCartLine,
   parameters: {
+    registryItem: "product-cart-line",
     layout: "centered",
     backgrounds: {
       default: "slate"

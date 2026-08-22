@@ -6,6 +6,7 @@ const meta = {
   title: "Footer",
   component: Footer,
   parameters: {
+    registryItem: "footer",
     layout: "fullscreen",
   },
   tags: ["autodocs"],
