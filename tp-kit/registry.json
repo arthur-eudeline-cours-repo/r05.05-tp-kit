@@ -93,6 +93,19 @@
       ]
     },
     {
+      "name": "products-data",
+      "type": "registry:lib",
+      "title": "Données produits",
+      "description": "Jeu de données statique des catégories et de leurs produits (PRODUCTS_CATEGORY_DATA), utilisé pour intégrer les maquettes sans backend.",
+      "files": [
+        {
+          "path": "src/data/products-category.data.ts",
+          "type": "registry:file",
+          "target": "data/products-category.data.ts"
+        }
+      ]
+    },
+    {
       "name": "starbucks-logo",
       "type": "registry:ui",
       "title": "StarbucksLogo",
