@@ -12,18 +12,17 @@ CLI `shadcn`, exactement comme les composants du registry officiel.
 Dans un projet Next.js/Vite déjà initialisé avec `shadcn` (`npx shadcn@latest init`) :
 
 ```sh
-npx shadcn@latest add http://localhost:6006/r/button.json
+npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/button.json
 ```
 
-(remplacez l'URL par celle où le registry est servi — voir *Servir le registry* ci-dessous). La CLI copie
-le fichier source dans `components/ui/`, installe les dépendances npm nécessaires (`class-variance-authority`,
-`@base-ui/react`, etc.) et ajoute les couleurs de marque (`brand`, `green`, `coffee`, `default`) à votre thème
-via l'item `theme`.
+La CLI copie le fichier source dans `components/ui/`, installe les dépendances npm nécessaires
+(`class-variance-authority`, `@base-ui/react`, etc.) et ajoute les couleurs de marque (`brand`, `green`,
+`coffee`, `default`) à votre thème via l'item `theme`.
 
 Pour récupérer les couleurs et le reset CSS du kit sans composant particulier :
 
 ```sh
-npx shadcn@latest add http://localhost:6006/r/theme.json
+npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/theme.json
 ```
 
 ## Composants disponibles
@@ -38,8 +37,16 @@ sont déclarées via `registryDependencies` et installées automatiquement.
 pnpm run registry:build   # génère public/r/*.json à partir de registry.json
 ```
 
-Le dossier `public/r/` peut ensuite être servi par n'importe quel serveur statique (le Storybook dockerisé de
-ce monorepo le fait déjà — voir plus bas).
+Le dossier `public/r/` peut ensuite être servi par n'importe quel serveur statique (le Storybook de ce
+monorepo le fait déjà, sous `/r` — voir plus bas).
+
+L'URL publique du registry est **`https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/`** : c'est
+le Storybook publié sur GitHub Pages par le dépôt
+[r05.05-tp-kit](https://github.com/arthur-eudeline-cours-repo/r05.05-tp-kit) (alimenté depuis ce monorepo par
+`scripts/split-ui-kit-public.sh`). Cette base est aussi codée en dur dans les `registryDependencies` de
+[`registry.json`](./registry.json) et dans le bloc « Installation » du Storybook
+(`tooling/storybook/.storybook/blocks/registry-install.tsx`) : si elle change, il faut la mettre à jour aux
+trois endroits.
 
 ## Utilisation dans ce monorepo
 
