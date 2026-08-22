@@ -2,33 +2,22 @@ import React from "react";
 import { Markdown, useOf } from "@storybook/addon-docs/blocks";
 
 /**
- * URL utilisée quand on n'arrive pas à déduire celle du Storybook courant
- * (rendu côté serveur, tests, ...).
- */
-const FALLBACK_REGISTRY_ORIGIN = "http://localhost:6006";
-
-/**
- * Déduit la racine sous laquelle le registry shadcn de tp-kit est servi.
+ * Racine publique sous laquelle le registry shadcn de tp-kit est servi.
  *
- * Les docs sont rendues depuis `<base>/iframe.html` ; en retirant le nom de
- * fichier on retombe sur la base du Storybook, sous laquelle `staticDirs`
- * expose `tooling/tp-kit/public/r` en `/r`. Ça marche donc aussi bien en local
- * (`http://localhost:6006`) qu'une fois déployé dans un sous-chemin
- * (GitHub Pages, par exemple).
+ * Le dépôt public https://github.com/arthur-eudeline-cours-repo/r05.05-tp-kit
+ * publie ce Storybook sur GitHub Pages, et `staticDirs` y expose
+ * `tooling/tp-kit/public/r` sous `/r`.
+ *
+ * C'est la même base que celle utilisée par les `registryDependencies` de
+ * `tooling/tp-kit/registry.json` : les deux doivent rester synchronisées, sinon
+ * `shadcn add` téléchargerait le composant depuis une origine et ses
+ * dépendances depuis une autre.
  */
-function registryBaseUrl(): string {
-  if (typeof window === "undefined") {
-    return FALLBACK_REGISTRY_ORIGIN;
-  }
-
-  const { origin, pathname } = window.location;
-  const base = pathname.replace(/[^/]*$/, "").replace(/\/$/, "");
-
-  return `${origin}${base}`;
-}
+export const REGISTRY_BASE_URL =
+  "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit";
 
 export function registryItemUrl(item: string): string {
-  return `${registryBaseUrl()}/r/${item}.json`;
+  return `${REGISTRY_BASE_URL}/r/${item}.json`;
 }
 
 /**
