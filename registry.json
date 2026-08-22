@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "starbucks-tp-kit",
-  "homepage": "https://github.com/arthur-eudeline/r05.05-dev-avance-tp-corrige",
+  "homepage": "https://github.com/arthur-eudeline-cours-repo/r05.05-tp-kit",
   "items": [
     {
       "name": "theme",
@@ -111,7 +111,7 @@
       "title": "Button",
       "description": "Bouton avec plusieurs variantes (primary, ghost, white, outline, light, danger) et tailles.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -130,7 +130,7 @@
       "title": "Card",
       "description": "Conteneur basique avec fond blanc, ombre et coins arrondis.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "files": [
         {
@@ -146,7 +146,7 @@
       "title": "Heading",
       "description": "Titre de section/page avec variantes de taille, couleur et graisse.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -165,7 +165,7 @@
       "title": "LoadingIndicator",
       "description": "Indicateur de chargement animé (spinner).",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "files": [
         {
@@ -181,7 +181,7 @@
       "title": "NoticeMessage",
       "description": "Message d'état (erreur/succès) avec icône.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "class-variance-authority",
@@ -201,7 +201,7 @@
       "title": "SectionContainer",
       "description": "Conteneur de section pleine largeur avec fond coloré (coffee/white/brand).",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -233,7 +233,7 @@
       "title": "MenuBar",
       "description": "Barre de navigation du haut de page, avec logo centré et zones leading/trailing.",
       "registryDependencies": [
-        "http://localhost:6006/r/starbucks-logo.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/starbucks-logo.json"
       ],
       "files": [
         {
@@ -249,7 +249,7 @@
       "title": "Footer",
       "description": "Pied de page avec logo, sections de liens et données par défaut.",
       "registryDependencies": [
-        "http://localhost:6006/r/starbucks-logo.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/starbucks-logo.json"
       ],
       "files": [
         {
@@ -296,7 +296,7 @@
       "title": "TextInput",
       "description": "Champ de saisie texte avec label, erreur, et emplacements before/after.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "files": [
         {
@@ -312,8 +312,8 @@
       "title": "PasswordInput",
       "description": "TextInput spécialisé pour les mots de passe, avec bouton d'affichage/masquage.",
       "registryDependencies": [
-        "http://localhost:6006/r/text-input.json",
-        "http://localhost:6006/r/button.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/text-input.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/button.json"
       ],
       "dependencies": [
         "lucide-react"
@@ -332,7 +332,7 @@
       "title": "Checkbox",
       "description": "Checkbox accessible basée sur Base UI, avec label associé.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "@base-ui/react",
@@ -352,7 +352,7 @@
       "title": "ProductImage",
       "description": "Image produit optimisée (next/image) avec effet de survol.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "files": [
         {
@@ -368,9 +368,9 @@
       "title": "ProductCardLayout",
       "description": "Carte produit (image, nom, prix) avec un emplacement pour un bouton personnalisé.",
       "registryDependencies": [
-        "http://localhost:6006/r/product-image.json",
-        "http://localhost:6006/r/formatted-price.json",
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/product-image.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-price.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "files": [
         {
@@ -386,10 +386,10 @@
       "title": "ProductCartLine",
       "description": "Ligne produit du panier avec contrôle de quantité et suppression.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json",
-        "http://localhost:6006/r/button.json",
-        "http://localhost:6006/r/formatted-price.json",
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/button.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-price.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "dependencies": [
         "@phosphor-icons/react"
@@ -408,7 +408,7 @@
       "title": "ProductGridLayout",
       "description": "Grille responsive de produits (builder pattern).",
       "registryDependencies": [
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "files": [
         {
@@ -424,7 +424,7 @@
       "title": "ProductRating",
       "description": "Affiche une note sous forme d'étoiles ou de cercles.",
       "registryDependencies": [
-        "http://localhost:6006/r/utils.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/utils.json"
       ],
       "dependencies": [
         "lucide-react"
@@ -443,7 +443,7 @@
       "title": "OrderStatus",
       "description": "Badge de statut de commande (en cours/complétée).",
       "registryDependencies": [
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "dependencies": [
         "class-variance-authority"
@@ -462,12 +462,12 @@
       "title": "OrderDetailsLayout",
       "description": "Détail complet d'une commande (statut, dates, lignes, total).",
       "registryDependencies": [
-        "http://localhost:6006/r/order-status.json",
-        "http://localhost:6006/r/formatted-date.json",
-        "http://localhost:6006/r/formatted-price.json",
-        "http://localhost:6006/r/button.json",
-        "http://localhost:6006/r/product-image.json",
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/order-status.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-date.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-price.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/button.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/product-image.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "files": [
         {
@@ -483,10 +483,10 @@
       "title": "OrderTableLayout",
       "description": "Tableau listant les commandes d'un utilisateur.",
       "registryDependencies": [
-        "http://localhost:6006/r/formatted-date.json",
-        "http://localhost:6006/r/formatted-price.json",
-        "http://localhost:6006/r/order-status.json",
-        "http://localhost:6006/r/types.json"
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-date.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/formatted-price.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/order-status.json",
+        "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/types.json"
       ],
       "files": [
         {
