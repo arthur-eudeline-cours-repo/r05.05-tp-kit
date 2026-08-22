@@ -8,6 +8,9 @@ import { Button } from "#tp-kit/components/button";
 const meta = {
   title: "Products/ProductGridLayout",
   component: ProductGridLayout,
+  parameters: {
+    registryItem: "product-grid-layout",
+  },
   tags: ["autodocs"],
   args: {
     products: PRODUCTS_CATEGORY_DATA[0].products.slice(1, 4),

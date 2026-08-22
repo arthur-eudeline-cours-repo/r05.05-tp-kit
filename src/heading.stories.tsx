@@ -6,6 +6,7 @@ const meta = {
   title: "Heading",
   component: Heading,
   parameters: {
+    registryItem: "heading",
     layout: "centered",
   },
   tags: ["autodocs"],

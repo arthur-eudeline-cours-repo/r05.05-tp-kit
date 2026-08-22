@@ -6,6 +6,7 @@ const meta = {
   title: "Data Display/FormattedDate",
   component: FormattedDate,
   parameters: {
+    registryItem: "formatted-date",
     layout: "centered",
   },
   tags: ["autodocs"],

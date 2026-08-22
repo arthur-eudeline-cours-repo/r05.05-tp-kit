@@ -6,6 +6,7 @@ const meta = {
   title: "Inputs/PasswordInput",
   component: PasswordInput,
   parameters: {
+    registryItem: "password-input",
     layout: "centered",
   },
   tags: ["autodocs"],

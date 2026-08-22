@@ -11,7 +11,6 @@
     "docker:push": "docker push arthureudeline/starbucks-tp-kit-storybook -a"
   },
   "dependencies": {
-    "@arthur.eudeline/starbucks-tp": "workspace:*",
     "@arthur.eudeline/starbucks-tp-kit": "workspace:*",
     "http-server": "14.1.1",
     "lucide-react": "^0.427.0"

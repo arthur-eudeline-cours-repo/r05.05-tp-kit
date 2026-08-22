@@ -6,6 +6,7 @@ const meta = {
   title: "Orders/OrderStatus",
   component: OrderStatus,
   parameters: {
+    registryItem: "order-status",
     layout: "centered",
   },
   tags: ["autodocs"],

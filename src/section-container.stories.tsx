@@ -6,6 +6,7 @@ const meta = {
   title: "SectionContainer",
   component: SectionContainer,
   parameters: {
+    registryItem: "section-container",
     layout: "fullscreen",
   },
   tags: ["autodocs"],

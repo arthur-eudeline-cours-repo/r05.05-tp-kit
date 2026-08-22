@@ -8,6 +8,7 @@ const meta = {
   title: "Inputs/TextInput",
   component: TextInput,
   parameters: {
+    registryItem: "text-input",
     layout: "centered",
   },
   tags: ["autodocs"],

@@ -6,6 +6,7 @@ const meta = {
   title: "StarbucksLogo",
   component: StarbucksLogo,
   parameters: {
+    registryItem: "starbucks-logo",
     layout: "centered",
   },
   tags: ["autodocs"],
