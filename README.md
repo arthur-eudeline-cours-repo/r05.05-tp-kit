@@ -9,20 +9,31 @@ CLI `shadcn`, exactement comme les composants du registry officiel.
 
 ## Installation d'un composant
 
-Dans un projet Next.js/Vite déjà initialisé avec `shadcn` (`npx shadcn@latest init`) :
+Dans un projet Next.js/Vite déjà initialisé avec `shadcn` (`npx shadcn@latest init`), déclarez d'abord le
+registry tp-kit sous l'espace de nom `@tp-kit` dans `components.json` :
 
-```sh
-npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/button.json
+```json
+{
+  "registries": {
+    "@tp-kit": "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/{name}.json"
+  }
+}
 ```
 
-La CLI copie le fichier source dans `components/ui/`, installe les dépendances npm nécessaires
+Vous pouvez ensuite installer un composant avec :
+
+```sh
+npx shadcn@latest add @tp-kit/button
+```
+
+La CLI copie le fichier source dans `src/components/tp-kit/`, installe les dépendances npm nécessaires
 (`class-variance-authority`, `@base-ui/react`, etc.) et ajoute les couleurs de marque (`brand`, `green`,
 `coffee`, `default`) à votre thème via l'item `theme`.
 
 Pour récupérer les couleurs et le reset CSS du kit sans composant particulier :
 
 ```sh
-npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/theme.json
+npx shadcn@latest add @tp-kit/theme
 ```
 
 Le jeu de données produits du TP (`PRODUCTS_CATEGORY_DATA`, copié dans
@@ -30,7 +41,7 @@ Le jeu de données produits du TP (`PRODUCTS_CATEGORY_DATA`, copié dans
 pour intégrer les maquettes avant d'avoir une base de données :
 
 ```sh
-npx shadcn@latest add https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/products-data.json
+npx shadcn@latest add @tp-kit/products-data
 ```
 
 ## Composants disponibles

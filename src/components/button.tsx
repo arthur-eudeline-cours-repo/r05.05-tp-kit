@@ -3,7 +3,7 @@ import React from "react";
 import { cn } from "../lib/utils";
 
 const buttonClasses = cva(
-  "transition-colors rounded-lg tracking-wide focus-visible:outline-none",
+  "transition-colors rounded-lg tracking-wide focus-visible:outline-none font-semibold cursor-pointer",
   {
     variants: {
       /**

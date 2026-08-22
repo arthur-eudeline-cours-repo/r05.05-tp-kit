@@ -75,7 +75,7 @@
         {
           "path": "src/lib/utils.ts",
           "type": "registry:lib",
-          "target": "lib/utils.ts"
+          "target": "@components/lib/utils.ts"
         }
       ]
     },
@@ -88,7 +88,7 @@
         {
           "path": "src/types.ts",
           "type": "registry:lib",
-          "target": "types.ts"
+          "target": "@components/types.ts"
         }
       ]
     },
@@ -114,7 +114,7 @@
         {
           "path": "src/components/starbucks-logo.tsx",
           "type": "registry:ui",
-          "target": "@components/starbucks-logo.tsx"
+          "target": "@components/tp-kit/starbucks-logo.tsx"
         }
       ]
     },
@@ -133,7 +133,7 @@
         {
           "path": "src/components/button.tsx",
           "type": "registry:ui",
-          "target": "@components/button.tsx"
+          "target": "@components/tp-kit/button.tsx"
         }
       ]
     },
@@ -149,7 +149,7 @@
         {
           "path": "src/components/card.tsx",
           "type": "registry:ui",
-          "target": "@components/card.tsx"
+          "target": "@components/tp-kit/card.tsx"
         }
       ]
     },
@@ -168,7 +168,7 @@
         {
           "path": "src/components/heading.tsx",
           "type": "registry:ui",
-          "target": "@components/heading.tsx"
+          "target": "@components/tp-kit/heading.tsx"
         }
       ]
     },
@@ -184,7 +184,7 @@
         {
           "path": "src/components/loading-indicator.tsx",
           "type": "registry:ui",
-          "target": "@components/loading-indicator.tsx"
+          "target": "@components/tp-kit/loading-indicator.tsx"
         }
       ]
     },
@@ -204,7 +204,7 @@
         {
           "path": "src/components/notice-message.tsx",
           "type": "registry:ui",
-          "target": "@components/notice-message.tsx"
+          "target": "@components/tp-kit/notice-message.tsx"
         }
       ]
     },
@@ -223,7 +223,7 @@
         {
           "path": "src/components/section-container.tsx",
           "type": "registry:ui",
-          "target": "@components/section-container.tsx"
+          "target": "@components/tp-kit/section-container.tsx"
         }
       ]
     },
@@ -236,7 +236,7 @@
         {
           "path": "src/components/breadcrumbs.tsx",
           "type": "registry:ui",
-          "target": "@components/breadcrumbs.tsx"
+          "target": "@components/tp-kit/breadcrumbs.tsx"
         }
       ]
     },
@@ -252,7 +252,7 @@
         {
           "path": "src/components/menu-bar.tsx",
           "type": "registry:ui",
-          "target": "@components/menu-bar.tsx"
+          "target": "@components/tp-kit/menu-bar.tsx"
         }
       ]
     },
@@ -268,12 +268,12 @@
         {
           "path": "src/components/footer.tsx",
           "type": "registry:ui",
-          "target": "@components/footer.tsx"
+          "target": "@components/tp-kit/footer.tsx"
         },
         {
           "path": "src/data/footer-sections.data.ts",
           "type": "registry:file",
-          "target": "data/footer-sections.data.ts"
+          "target": "@components/data/footer-sections.data.ts"
         }
       ]
     },
@@ -286,7 +286,7 @@
         {
           "path": "src/components/data-display/formatted-date.tsx",
           "type": "registry:ui",
-          "target": "@components/data-display/formatted-date.tsx"
+          "target": "@components/tp-kit/data-display/formatted-date.tsx"
         }
       ]
     },
@@ -299,7 +299,7 @@
         {
           "path": "src/components/data-display/formatted-price.tsx",
           "type": "registry:ui",
-          "target": "@components/data-display/formatted-price.tsx"
+          "target": "@components/tp-kit/data-display/formatted-price.tsx"
         }
       ]
     },
@@ -315,7 +315,7 @@
         {
           "path": "src/components/inputs/text-input.tsx",
           "type": "registry:ui",
-          "target": "@components/inputs/text-input.tsx"
+          "target": "@components/tp-kit/inputs/text-input.tsx"
         }
       ]
     },
@@ -335,7 +335,7 @@
         {
           "path": "src/components/inputs/password-input.tsx",
           "type": "registry:ui",
-          "target": "@components/inputs/password-input.tsx"
+          "target": "@components/tp-kit/inputs/password-input.tsx"
         }
       ]
     },
@@ -355,7 +355,7 @@
         {
           "path": "src/components/inputs/checkbox.tsx",
           "type": "registry:ui",
-          "target": "@components/inputs/checkbox.tsx"
+          "target": "@components/tp-kit/inputs/checkbox.tsx"
         }
       ]
     },
@@ -371,7 +371,7 @@
         {
           "path": "src/components/products/product-image.tsx",
           "type": "registry:ui",
-          "target": "@components/products/product-image.tsx"
+          "target": "@components/tp-kit/products/product-image.tsx"
         }
       ]
     },
@@ -389,7 +389,7 @@
         {
           "path": "src/components/products/product-card-layout.tsx",
           "type": "registry:ui",
-          "target": "@components/products/product-card-layout.tsx"
+          "target": "@components/tp-kit/products/product-card-layout.tsx"
         }
       ]
     },
@@ -411,7 +411,7 @@
         {
           "path": "src/components/products/product-cart-line.tsx",
           "type": "registry:ui",
-          "target": "@components/products/product-cart-line.tsx"
+          "target": "@components/tp-kit/products/product-cart-line.tsx"
         }
       ]
     },
@@ -427,7 +427,7 @@
         {
           "path": "src/components/products/product-grid-layout.tsx",
           "type": "registry:ui",
-          "target": "@components/products/product-grid-layout.tsx"
+          "target": "@components/tp-kit/products/product-grid-layout.tsx"
         }
       ]
     },
@@ -446,7 +446,7 @@
         {
           "path": "src/components/products/product-rating.tsx",
           "type": "registry:ui",
-          "target": "@components/products/product-rating.tsx"
+          "target": "@components/tp-kit/products/product-rating.tsx"
         }
       ]
     },
@@ -465,7 +465,7 @@
         {
           "path": "src/components/orders/order-status.tsx",
           "type": "registry:ui",
-          "target": "@components/orders/order-status.tsx"
+          "target": "@components/tp-kit/orders/order-status.tsx"
         }
       ]
     },
@@ -486,7 +486,7 @@
         {
           "path": "src/components/orders/order-details-layout.tsx",
           "type": "registry:ui",
-          "target": "@components/orders/order-details-layout.tsx"
+          "target": "@components/tp-kit/orders/order-details-layout.tsx"
         }
       ]
     },
@@ -505,7 +505,7 @@
         {
           "path": "src/components/orders/order-table-layout.tsx",
           "type": "registry:ui",
-          "target": "@components/orders/order-table-layout.tsx"
+          "target": "@components/tp-kit/orders/order-table-layout.tsx"
         }
       ]
     }
