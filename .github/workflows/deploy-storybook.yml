@@ -47,13 +47,12 @@ jobs:
       - name: Build Storybook
         run: pnpm --dir storybook run build
 
-      # `enablement: true` active GitHub Pages (source = GitHub Actions) si ce
-      # n'est pas déjà fait, pour que le dépôt public soit fonctionnel sans
-      # aller cocher quoi que ce soit dans ses Settings après un re-split.
+      # Prérequis (une seule fois, côté dépôt public) : Settings > Pages >
+      # Source = "GitHub Actions". Ne pas utiliser `enablement: true` ici : le
+      # GITHUB_TOKEN n'a pas le droit de créer le site Pages ("Resource not
+      # accessible by integration"), même avec `pages: write`.
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload Storybook build
         uses: actions/upload-pages-artifact@v3
