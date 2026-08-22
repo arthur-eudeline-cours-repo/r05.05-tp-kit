@@ -15,7 +15,7 @@ function getAbsolutePath(value: string): any {
 }
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 
   // Sert le registry shadcn de tp-kit (généré par `pnpm -C ../tp-kit run registry:build`) sous /r,
   // pour que `npx shadcn add http://.../r/button.json` fonctionne une fois le Storybook déployé.

@@ -1,0 +1,72 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Starbucks TP Kit
+
+Ce Storybook documente le **kit de composants UI** du TP fil rouge « Starbucks » de la matière R05.05
+(Programmation Avancée, IUT Nevers). Il liste tous les composants disponibles, leurs variantes, et la façon
+de les installer dans votre propre projet.
+
+Depuis la v3, le kit n'est **plus un package npm compilé** : c'est un **registry [shadcn](https://ui.shadcn.com/docs/registry)**.
+Les composants sont de simples fichiers source (Tailwind v4, [Base UI](https://base-ui.com), `cn()` via
+`clsx` + `tailwind-merge`) que la CLI `shadcn` copie directement dans votre projet — vous en devenez
+propriétaire, exactement comme avec les composants du registry officiel shadcn/ui.
+
+## Installation
+
+### 1. Initialiser shadcn dans votre projet
+
+Si ce n'est pas déjà fait, dans un projet Next.js ou Vite :
+
+```bash
+npx shadcn@latest init
+```
+
+### 2. Déclarer le registry tp-kit
+
+Ajoutez l'entrée suivante dans le `components.json` à la racine de votre projet, sous la clé `registries` :
+
+```json
+{
+  "registries": {
+    "@tp-kit": "https://arthur-eudeline-cours-repo.github.io/r05.05-tp-kit/r/{name}.json"
+  }
+}
+```
+
+Cela déclare l'espace de nom `@tp-kit`, qui pointe vers le registry publié par ce Storybook sur GitHub
+Pages. Chaque composant devient alors installable via `@tp-kit/<nom-du-composant>`.
+
+### 3. Installer un composant
+
+```bash
+npx shadcn@latest add @tp-kit/button
+```
+
+La CLI copie le fichier source dans `src/components/tp-kit/`, installe les dépendances npm nécessaires
+(`class-variance-authority`, `@base-ui/react`, etc.) et résout automatiquement les dépendances internes du
+kit (`cn()`, types, composants réutilisés comme `text-input` pour `password-input`).
+
+### 4. Installer le thème
+
+Les couleurs de marque (`brand`, `green`, `coffee`, `default`) et le reset CSS du kit s'installent une seule
+fois, indépendamment de tout composant :
+
+```bash
+npx shadcn@latest add @tp-kit/theme
+```
+
+### 5. Installer les données produits (TP2)
+
+Pour intégrer les maquettes avant d'avoir une base de données, le TP2 fournit un item dédié au jeu de
+données produits (`PRODUCTS_CATEGORY_DATA`) :
+
+```bash
+npx shadcn@latest add @tp-kit/products-data
+```
+
+## Composants disponibles
+
+Chaque composant a sa propre page de documentation dans la barre latérale, classée par catégorie
+(Inputs, Products, Orders, Data Display, ...) avec sa commande d'installation, ses props et ses variantes.
