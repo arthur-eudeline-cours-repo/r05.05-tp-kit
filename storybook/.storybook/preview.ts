@@ -14,6 +14,11 @@ const preview: Preview = {
     docs: {
       page: DocsPage,
     },
+    options: {
+      storySort: {
+        order: ["Introduction", "*"],
+      },
+    },
     backgrounds: {
       options: {
         starbucks: {

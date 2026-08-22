@@ -21,6 +21,24 @@ export function registryItemUrl(item: string): string {
 }
 
 /**
+ * Espace de nom sous lequel le registry tp-kit est déclaré dans le
+ * `components.json` d'un projet consommateur (voir la page d'accueil du
+ * Storybook) :
+ *
+ * ```json
+ * { "registries": { "@tp-kit": "https://.../r/{name}.json" } }
+ * ```
+ *
+ * Une fois ce mapping ajouté, `shadcn add @tp-kit/<item>` résout vers le même
+ * item que l'URL complète renvoyée par `registryItemUrl`.
+ */
+export const REGISTRY_NAMESPACE = "@tp-kit";
+
+export function registryItemRef(item: string): string {
+  return `${REGISTRY_NAMESPACE}/${item}`;
+}
+
+/**
  * Affiche la commande `shadcn add` permettant d'installer le composant courant
  * dans un projet externe.
  *
@@ -45,7 +63,7 @@ export function RegistryInstall() {
 
   const items = Array.isArray(registryItem) ? registryItem : [registryItem];
   const commands = items
-    .map((item) => `npx shadcn@latest add ${registryItemUrl(item)}`)
+    .map((item) => `npx shadcn@latest add ${registryItemRef(item)}`)
     .join("\n");
 
   return (
@@ -53,14 +71,14 @@ export function RegistryInstall() {
       {[
         `## Installation`,
         ``,
-        `Depuis la racine de votre projet :`,
+        `Le registry \`${REGISTRY_NAMESPACE}\` doit être déclaré dans le \`components.json\` de votre projet (voir la page d'accueil du Storybook). Depuis la racine du projet :`,
         ``,
         "```bash",
         commands,
         "```",
         ``,
         `Les dépendances internes du kit (\`cn()\`, types, composants réutilisés) sont installées automatiquement.`,
-        `Le thème (couleurs de marque) ne s'installe qu'une seule fois, avec \`npx shadcn@latest add ${registryItemUrl("theme")}\`.`,
+        `Le thème (couleurs de marque) ne s'installe qu'une seule fois, avec \`npx shadcn@latest add ${registryItemRef("theme")}\`.`,
       ].join("\n")}
     </Markdown>
   );
