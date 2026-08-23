@@ -1,16 +1,12 @@
-import React from "react";
-import { FOOTER_SECTION_DATA as sections } from "../data/footer-sections.data";
+import { FOOTER_SECTION_DATA as sections } from "@/data/footer-sections.data";
 import { StarbucksLogo } from "./starbucks-logo";
-
-type Props = {
-};
 
 /**
  * Le footer du site
  */
-export const Footer: React.FC<Props> = function () {
+export function Footer() {
   return (
-    <footer className="bg-brand-600 pb-[100px] text-white relative overflow-hidden">
+    <footer className="bg-brand-600 pb-25 text-white relative overflow-hidden">
       <div className="text-center lg:text-left text-xl lg:text-3xl uppercase font-bold tracking-widest container mx-auto p-8">
         Starbucks
       </div>
