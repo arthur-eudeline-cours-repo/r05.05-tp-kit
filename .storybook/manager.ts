@@ -38,6 +38,7 @@ const el = `<div>
 addons.setConfig({
   theme: create({
     base: "dark",
+    fontBase: '"Lexend", sans-serif',
     brandTitle: el,
     brandTarget: theme.brandTarget,
     brandUrl: theme.brandUrl,

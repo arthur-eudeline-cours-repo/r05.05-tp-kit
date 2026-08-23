@@ -44,7 +44,7 @@ export const Colors: Story = {
   render: () => {
     return <div>
       <Heading as="h2" variant={"black"} size="display">Variant Black</Heading>
-      <Heading as="h2" variant={"brand"} size="xl">Variant Brand</Heading>
+      <Heading as="h2" variant={"brand"} size="display">Variant Brand</Heading>
     </div>;
   }
 };

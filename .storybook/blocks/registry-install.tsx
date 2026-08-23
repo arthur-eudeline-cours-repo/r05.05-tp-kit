@@ -69,16 +69,12 @@ export function RegistryInstall() {
   return (
     <Markdown>
       {[
-        `## Installation`,
+        `### Installation`,
         ``,
-        `Le registry \`${REGISTRY_NAMESPACE}\` doit être déclaré dans le \`components.json\` de votre projet (voir la page d'accueil du Storybook). Depuis la racine du projet :`,
-        ``,
+        `Depuis la racine du projet, lancer la commande :`,
         "```bash",
         commands,
         "```",
-        ``,
-        `Les dépendances internes du kit (\`cn()\`, types, composants réutilisés) sont installées automatiquement.`,
-        `Le thème (couleurs de marque) ne s'installe qu'une seule fois, avec \`npx shadcn@latest add ${registryItemRef("theme")}\`.`,
       ].join("\n")}
     </Markdown>
   );
