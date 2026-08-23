@@ -44,7 +44,7 @@ export type ButtonProps = VariantProps<typeof buttonClasses> & {
   /**
    * Le contenu du bouton
    */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /**
    * Action déclenchée au clic
    */
