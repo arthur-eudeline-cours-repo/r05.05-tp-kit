@@ -1,0 +1,26 @@
+[12:25:32.837] [INFO] storybook v10.5.9
+[12:25:33.952] [DEBUG] Getting package.json info for /Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avancée/starbucks-tp/tooling/storybook/package.json...
+[12:25:34.199] [DEBUG] Could not determine @babel/preset-env version in use. In case of runtime errors with @babel/preset-env, you may need to set the babelRemoveBugfixes feature flag in your `main.ts` file.
+[12:25:34.383] [DEBUG] Serving static files from [36mtooling/tp-kit/public/r[39m at [36m/r[39m
+[12:25:34.385] [INFO] Starting...
+[12:25:34.452] [DEBUG] Starting preview..
+[12:25:34.703] [WARN] 🚨 Unable to index files:
+- ./src/menu-bar.stories.tsx,./src/popover.stories.tsx: Duplicate stories with id: menubar--default
+- ./src/menu-bar.stories.tsx,./src/popover.stories.tsx: Duplicate stories with id: menubar--with-leading-and-trailing
+[12:25:34.704] [ERROR] Failed to build the preview
+[12:25:34.706] [ERROR] Error: [38;2;241;97;97mUnable to index files:
+- ./src/menu-bar.stories.tsx,./src/popover.stories.tsx: Duplicate stories with id: menubar--default
+- ./src/menu-bar.stories.tsx,./src/popover.stories.tsx: Duplicate stories with id: menubar--with-leading-and-trailing[39m
+    at _StoryIndexGenerator.getIndexAndStats (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/storybook@10.5.9_@types+react@19.2.18_prettier@3.5.1_react@18.3.1/node_modules/storybook/dist/core-server/index.js:19426:15)
+    at async _StoryIndexGenerator.getIndex (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/storybook@10.5.9_@types+react@19.2.18_prettier@3.5.1_react@18.3.1/node_modules/storybook/dist/core-server/index.js:19405:13)
+    at async BasicMinimalPluginContext.config (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/@storybook+builder-vite@10.5.9_esbuild@0.28.2_rollup@4.62.4_storybook@10.5.9_@types+rea_3bd364d7bd9903cfcddec07b2c7098ce/node_modules/@storybook/builder-vite/dist/_node-chunks/chunk-GTWKC4DO.js:188:19)
+    at async runConfigHook (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/vite@7.3.6_@types+node@22.1.0_jiti@2.7.0_lightningcss@1.32.0_terser@5.31.3_tsx@4.17.0/node_modules/vite/dist/node/chunks/config.js:36023:15)
+    at async resolveConfig (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/vite@7.3.6_@types+node@22.1.0_jiti@2.7.0_lightningcss@1.32.0_terser@5.31.3_tsx@4.17.0/node_modules/vite/dist/node/chunks/config.js:35525:13)
+    at async _createServer (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/vite@7.3.6_@types+node@22.1.0_jiti@2.7.0_lightningcss@1.32.0_terser@5.31.3_tsx@4.17.0/node_modules/vite/dist/node/chunks/config.js:25441:67)
+    at async Module.start (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/@storybook+builder-vite@10.5.9_esbuild@0.28.2_rollup@4.62.4_storybook@10.5.9_@types+rea_3bd364d7bd9903cfcddec07b2c7098ce/node_modules/@storybook/builder-vite/dist/index.js:1621:17)
+    at async storybookDevServer (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/storybook@10.5.9_@types+react@19.2.18_prettier@3.5.1_react@18.3.1/node_modules/storybook/dist/core-server/index.js:11225:59)
+    at async buildOrThrow (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/storybook@10.5.9_@types+react@19.2.18_prettier@3.5.1_react@18.3.1/node_modules/storybook/dist/core-server/index.js:8331:12)
+    at async buildDevStandalone (file:///Users/arthur/Projets/iut-nevers/R05.05-Programmation-Avance%CC%81e/starbucks-tp/node_modules/.pnpm/storybook@10.5.9_@types+react@19.2.18_prettier@3.5.1_react@18.3.1/node_modules/storybook/dist/core-server/index.js:11990:41)
+[12:25:34.707] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[12:25:37.864] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":true}
