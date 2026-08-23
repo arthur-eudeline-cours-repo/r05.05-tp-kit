@@ -20,7 +20,7 @@ const variants = cva("px-4 lg:px-8 flow-root py-8", {
 });
 
 type Props = VariantProps<typeof variants> & {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /**
    * Indique si la section utilisera un container ou si elle prendra toute la largeur de la page
    */
