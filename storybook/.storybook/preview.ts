@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/nextjs-vite";
+import { create } from "storybook/theming";
 import colors from "@arthur.eudeline/starbucks-tp-kit/tailwind/colors";
 import { DocsPage } from "./docs-page";
 import "./tailwind.css";
@@ -13,6 +14,10 @@ const preview: Preview = {
     layout: "fullscreen",
     docs: {
       page: DocsPage,
+      theme: create({
+        base: "light",
+        fontBase: '"Lexend", sans-serif',
+      }),
     },
     options: {
       storySort: {

@@ -14,43 +14,37 @@ const meta = {
     as: "h1",
     size: "md",
     variant: "black",
-    weight: "normal"
   },
 } satisfies Meta<typeof Heading>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Medium: Story = {
-  args: {
-    as: "h1",
-    size: "md",
-    children: "My heading",
-  },
-};
-
-export const Large: Story = {
+export const Sizes: Story = {
   args: {
     as: "h1",
     size: "lg",
     children: "My large heading",
   },
+  render: () => {
+    return <div>
+      <Heading as="h2" size="display">Display</Heading>
+      <Heading as="h2" size="xl">XL Heading</Heading>
+      <Heading as="h2" size="lg">LG Heading</Heading>
+      <Heading as="h2" size="md">MD Heading</Heading>
+      <Heading as="h2" size="sm">SM Heading</Heading>
+    </div>;
+  }
 };
 
-export const Colored: Story = {
-  args: {
-    as: "h1",
-    size: "md",
-    children: "My colored heading",
-    variant: "brand",
-  },
-};
-
-export const Bold: Story = {
-  args: {
-    as: "h1",
-    size: "md",
-    weight: "bold",
-    children: "My Bold Heading",
-  },
+/**
+ * Vous pouvez changer la couleur du titre via la propriété 
+ */
+export const Colors: Story = {
+  render: () => {
+    return <div>
+      <Heading as="h2" variant={"black"} size="display">Variant Black</Heading>
+      <Heading as="h2" variant={"brand"} size="display">Variant Brand</Heading>
+    </div>;
+  }
 };

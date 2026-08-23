@@ -13,7 +13,7 @@ const meta = {
   args: {},
   decorators: [
     (Story) => (
-      <div className="pb-[500px]">
+      <div className="pb-125">
         <Story />
       </div>
     ),
