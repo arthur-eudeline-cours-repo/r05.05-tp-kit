@@ -9,7 +9,7 @@ type Props = {
   children?: ReactNode;
 }
 
-export default function Popover(props: Props) {
+export function Popover(props: Props) {
   return (
     <Primitive.Root>
       <div className='flex justify-end items-center'>

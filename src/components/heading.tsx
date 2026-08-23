@@ -1,47 +1,28 @@
-import { cva } from "class-variance-authority";
+import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
-const variants = cva("tracking-widest uppercase", {
+const variants = cva("", {
   variants: {
     size: {
-      lg: "text-xl",
-      md: "text-base",
-      sm: "text-sm",
+      display: "text-2xl lg:text-6xl font-bold",
+      xl: "text-xl lg:text-3xl font-bold",
+      lg: "text-lg lg:text-xl font-bold",
+      md: "text-base uppercase font-bold",
+      sm: "text-sm uppercase",
     },
     variant: {
       brand: "text-brand",
       black: "text-slate-800",
     },
-    weight: {
-      normal: "font-normal",
-      bold: "font-bold",
-    },
   },
   defaultVariants: {
     variant: "black",
-    weight: "normal"
   }
 });
 
-type Variants = {
-  /**
-   * Définit la taille de la police du titre
-   */
-  size: "lg" | "md" | "sm",
-  /**
-   * Définit la couleur du titre
-   * @default black
-   */
-  variant?: "brand" | "black",
-  /**
-   * Définit la graisse de la police du titre
-   * @default normal
-   */
-  weight?: "normal" | "bold"
-};
 
-type Props = Variants & {
+type Props = VariantProps<typeof variants> & {
   /**
    * Définie la balise HTML utilisée pour rendre le titre
    */
