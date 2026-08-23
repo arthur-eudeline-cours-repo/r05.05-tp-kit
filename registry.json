@@ -22,18 +22,6 @@
           "color-brand-800": "#1c493a",
           "color-brand-900": "#183c31",
           "color-brand-950": "#0c221c",
-          "color-green": "#388a6b",
-          "color-green-50": "#f0f9f5",
-          "color-green-100": "#dbf0e4",
-          "color-green-200": "#bae0cd",
-          "color-green-300": "#8cc9ae",
-          "color-green-400": "#5cab8a",
-          "color-green-500": "#388a6b",
-          "color-green-600": "#297258",
-          "color-green-700": "#215b48",
-          "color-green-800": "#1c493a",
-          "color-green-900": "#183c31",
-          "color-green-950": "#0c221c",
           "color-coffee": "#463F3A",
           "color-coffee-50": "#fcf9f4",
           "color-coffee-100": "#e6e2de",
@@ -75,7 +63,7 @@
         {
           "path": "src/lib/utils.ts",
           "type": "registry:lib",
-          "target": "@components/lib/utils.ts"
+          "target": "@/lib/utils.ts"
         }
       ]
     },
@@ -273,7 +261,7 @@
         {
           "path": "src/data/footer-sections.data.ts",
           "type": "registry:file",
-          "target": "@components/data/footer-sections.data.ts"
+          "target": "@data/footer-sections.data.ts"
         }
       ]
     },
