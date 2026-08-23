@@ -20,6 +20,7 @@
     "./components/loading-indicator": "./src/components/loading-indicator.tsx",
     "./components/menu-bar": "./src/components/menu-bar.tsx",
     "./components/notice-message": "./src/components/notice-message.tsx",
+    "./components/popover": "./src/components/popover.tsx",
     "./components/section-container": "./src/components/section-container.tsx",
     "./components/starbucks-logo": "./src/components/starbucks-logo.tsx",
     "./components/data-display/formatted-date": "./src/components/data-display/formatted-date.tsx",
