@@ -32,13 +32,12 @@
     "./components/orders/order-table-layout": "./src/components/orders/order-table-layout.tsx",
     "./components/products/product-card-layout": "./src/components/products/product-card-layout.tsx",
     "./components/products/product-cart-line": "./src/components/products/product-cart-line.tsx",
-    "./components/products/product-grid-layout": "./src/components/products/product-grid-layout.tsx",
     "./components/products/product-image": "./src/components/products/product-image.tsx",
     "./components/products/product-rating": "./src/components/products/product-rating.tsx"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "registry:build": "shadcn build",
+    "registry:build": "shadcn build && node scripts/fix-registry-imports.mjs",
     "lint": "eslint src"
   },
   "dependencies": {

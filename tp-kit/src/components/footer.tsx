@@ -10,7 +10,7 @@ type Props = {
  */
 export const Footer: React.FC<Props> = function () {
   return (
-    <footer className="bg-green-600 pb-[100px] text-white relative overflow-hidden">
+    <footer className="bg-brand-600 pb-[100px] text-white relative overflow-hidden">
       <div className="text-center lg:text-left text-xl lg:text-3xl uppercase font-bold tracking-widest container mx-auto p-8">
         Starbucks
       </div>

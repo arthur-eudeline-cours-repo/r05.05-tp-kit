@@ -25,7 +25,7 @@ const variants = cva(
         error:
           "bg-red-50 text-red-800 hover:bg-red-100 active:bg-red-200 border-red-800",
         success:
-          "bg-green-50 text-green-800 hover:bg-green-100 active:bg-green-200 border-green-800",
+          "bg-brand-50 text-brand-800 hover:bg-brand-100 active:bg-brand-200 border-brand-800",
       } satisfies Record<keyof typeof labels, string>,
     },
     defaultVariants: {
