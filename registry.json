@@ -348,6 +348,22 @@
       ]
     },
     {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Popover positionnable basé sur Base UI, avec déclencheur personnalisable.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "src/components/popover.tsx",
+          "type": "registry:ui",
+          "target": "@components/tp-kit/popover.tsx"
+        }
+      ]
+    },
+    {
       "name": "product-image",
       "type": "registry:ui",
       "title": "ProductImage",

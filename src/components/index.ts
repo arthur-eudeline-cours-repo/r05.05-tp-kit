@@ -4,6 +4,7 @@ export * from './data-display';
 export * from './footer';
 export * from './menu-bar';
 export * from './notice-message';
+export * from './popover';
 export * from './products';
 export * from './section-container';
 export * from './orders';
