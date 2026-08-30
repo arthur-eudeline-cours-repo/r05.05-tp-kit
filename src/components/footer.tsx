@@ -1,4 +1,4 @@
-import { FOOTER_SECTION_DATA as sections } from "@/data/footer-sections.data";
+import { FOOTER_SECTION_DATA as sections } from "../data/footer-sections.data";
 import { StarbucksLogo } from "./starbucks-logo";
 
 /**

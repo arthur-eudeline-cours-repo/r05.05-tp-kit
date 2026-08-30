@@ -35,7 +35,7 @@ type Props = {
   /**
    * Le sous total de la ligne
    */
-  subTotal?: string;
+  subTotal?: number;
 };
 
 const MIN = 1;
@@ -129,12 +129,14 @@ export const ProductCartLine: React.FC<Props> = function ({
             +
           </Button>
         </div>
-        <p className="flex flex-row items-center justify-between gap-4 text-base">
-          <FormattedPrice
-            className="text-right"
-            price={subTotal}
-          />
-        </p>
+        {subTotal !== undefined && (
+          <p className="flex flex-row items-center justify-between gap-4 text-base">
+            <FormattedPrice
+              className="text-right"
+              price={subTotal}
+            />
+          </p>
+        )}
       </div>
     </div>
   );
