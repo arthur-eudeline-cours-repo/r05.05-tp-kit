@@ -31,6 +31,11 @@ type Props = {
    * Classe HTML optionnelle
    */
   className?: string;
+
+  /**
+   * Le sous total de la ligne
+   */
+  subTotal?: string;
 };
 
 const MIN = 1;
@@ -44,6 +49,7 @@ export const ProductCartLine: React.FC<Props> = function ({
   onDelete,
   onQtyChange,
   className,
+  subTotal
 }) {
   const [q, setQ] = useState<string>(qty?.toString() ?? '');
   useEffect(() => {
@@ -126,7 +132,7 @@ export const ProductCartLine: React.FC<Props> = function ({
         <p className="flex flex-row items-center justify-between gap-4 text-base">
           <FormattedPrice
             className="text-right"
-            price={product.price * (qty ?? MIN)}
+            price={subTotal}
           />
         </p>
       </div>
