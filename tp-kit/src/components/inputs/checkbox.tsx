@@ -4,7 +4,7 @@ import { Checkbox as BaseCheckbox } from "@base-ui/react/checkbox";
 import { CheckIcon } from "lucide-react";
 
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 type Props = Omit<BaseCheckbox.Root.Props, 'id' | 'onChange'> & {
   label: React.ReactNode;

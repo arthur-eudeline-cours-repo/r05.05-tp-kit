@@ -29,11 +29,12 @@
       }
     ],
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-    },
+    // Volontairement aucun alias `@/*` ici : les sources du kit sont compilées telles quelles par
+    // les apps qui les consomment (transpilePackages / Vite), où `@/*` pointe déjà sur *leur* src.
+    // Les imports internes restent relatifs ; c'est `scripts/fix-registry-imports.mjs` qui les
+    // convertit en `@/...` dans le registry généré. L'absence de `paths` fait échouer `tsc` si un
+    // `@/...` est réintroduit dans src/.
+    "paths": {},
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "declaration": true,
